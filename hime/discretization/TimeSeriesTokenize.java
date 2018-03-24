@@ -250,16 +250,20 @@ public class TimeSeriesTokenize {
 			double Ex=x[i+saxWindowSize-1]-x[i]+timeseries[i];
 			double sig=Math.sqrt((Ex2-Ex*Ex/saxWindowSize)/(saxWindowSize-1));
 			double means=Ex/saxWindowSize;
-			step=0;
+	
 			int S=saxWindowSize/paat;
+			
+			//Note: paa will computed in chunked subsequence. (e.g. given subsequence of 300, paa=32
+			//it actually compute paa in [0 32*9] since floor(300/32) = 9
+			
 			if(sig>0 && !Double.isNaN(sig))
 			{
-					for(int j=i;j<=i+saxWindowSize-Math.max(S,paat);j=j+S)
+					for(step=0;step<paat;step++)
 					{
-							int n=j+S;
-							double ExN=x[n-1]-x[j]+timeseries[j];
-							paaTest[step]=ExN/(S*sig)-means/sig;
-							step++;
+							int start=i+S*step; //Start Point of PAA Segment
+							int end=i+S*(step+1)-1;  //End Point of PAA Segment
+							double ExN=x[end]-x[start]+timeseries[start];
+							paaTest[step]=ExN/(S*sig)-means/sig; //PAA value
 					}
 			}
 
