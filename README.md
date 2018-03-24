@@ -8,9 +8,9 @@ Website: https://sites.google.com/site/himeicdm/
 To download and run the executable jar with demo:
 
 ```bash
-	git -clone https://github.com/flash121123/HIME.git
-	cd HIME-master/bin
-    . demo.sh
+git -clone https://github.com/flash121123/HIME.git
+cd HIME-master/bin
+. demo.sh
 ```
 
 res.txt is the motif discovery result. 
@@ -85,7 +85,11 @@ grep -i "Motif" tmp.log | cut -d' ' -f 2- > res.txt
 
 
 ## Reference
-@inproceedings{gao2017hime,
+
+If you found the code is useful, please cite the paper
+
+```bash
+  @inproceedings{gao2017hime,
 
   title={Efficient Discovery of Variable-length Time Series Motifs with Large Length Range in Million Scale Time Series},
 
@@ -98,6 +102,7 @@ grep -i "Motif" tmp.log | cut -d' ' -f 2- > res.txt
   month = { Nov }
 
 }
+```
 
 Dataset References can be found in the paper.
 
