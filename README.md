@@ -2,6 +2,7 @@
 
 Website: https://sites.google.com/site/himeicdm/
 
+
 ## Getting started
 
 To download and run the executable jar with demo:
@@ -93,9 +94,6 @@ grep -i "Motif" tmp.log | cut -d' ' -f 2- > res.txt
 }
 
 Dataset References can be found in the paper.
-
-
-
 
 
 
