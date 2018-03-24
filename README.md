@@ -77,14 +77,14 @@ TO CONVERT LOGS TO RESULT DATA:
 grep -i "Motif" tmp.log | cut -d' ' -f 2- > res.txt
 ```
 
-##Other Notes:
+## Other Notes:
 
 1. The main process does not drop all false positive motifs. The threshold parametr is only used for discretization step in the program (See paper for detail). So the motifs in res.txt may contain false positive. You can filter out all false positive based on the output result (distance metric for each motif).
 
 2. The algorithm returns pair of variable length motif instances. You can use MASS algorithm in http://www.cs.unm.edu/~mueen/FastestSimilaritySearch.html to find exact instances. You may use MDL method, original threshold used in HIME, adjusted motif threshold to locate the occuring instances of motif.
 
 
-##Reference
+## Reference
 @inproceedings{gao2017hime,
   title={Efficient Discovery of Variable-length Time Series Motifs with Large Length Range in Million Scale Time Series},
   author={Yifeng, Gao and Jessica Lin},
