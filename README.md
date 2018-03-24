@@ -9,7 +9,7 @@ To download and run the executable jar with demo:
 
 ```bash
 git -clone https://github.com/flash121123/HIME.git
-cd HIME-master/bin
+cd HIME/bin
 . demo.sh
 ```
 
