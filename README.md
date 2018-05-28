@@ -94,10 +94,7 @@ author={Y. Gao and J. Lin},
 booktitle={2017 IEEE International Conference on Data Mining (ICDM)}, 
 title={Efficient discovery of time series motifs with large length range in million scale time series}, 
 year={2017}, 
-volume={}, 
-number={}, 
 pages={1213-1222}, 
-keywords={Approximation algorithms;Data mining;Grammar;Scalability;Task analysis;Time series analysis}, 
 month={Nov}}
 ```
 
