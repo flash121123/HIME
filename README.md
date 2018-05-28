@@ -88,14 +88,15 @@ grep -i "Motif" tmp.log | cut -d' ' -f 2- > res.txt
 
 If you found the code is useful, please cite the paper
 
-```bash
+```
   @INPROCEEDINGS{hime2017, 
-author={Y. Gao and J. Lin}, 
-booktitle={2017 IEEE International Conference on Data Mining (ICDM)}, 
-title={Efficient discovery of time series motifs with large length range in million scale time series}, 
-year={2017}, 
-pages={1213-1222}, 
-month={Nov}}
+                 author={Y. Gao and J. Lin}, 
+                 booktitle={2017 IEEE International Conference on Data Mining (ICDM)}, 
+                 title={Efficient discovery of time series motifs with large length range in million scale time series}, 
+                 year={2017}, 
+                 pages={1213-1222}, 
+                 month={Nov}
+                 }
 ```
 
 Dataset References can be found in the paper.
