@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="makejar" name="HIME">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="ant.build.javac.source" value="1.8"/>
+    <property name="ant.build.javac.target" value="1.8"/>
+    <path id="Configuration.classpath">
+        <pathelement location="build"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build"/>
+        <copy includeemptydirs="false" todir="build">
+            <fileset dir="hime">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+    <target depends="build" name ="makejar" description="Create a jar for the HIME project">
+          <jar jarfile="HIME.jar" basedir="build">
+              <manifest>
+                   <attribute name="Main-Class" value="Run"/>
+            </manifest>
+          </jar>
+          <echo message="Creating jar file."/>
+      </target>
+    <target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" srcdir="." destdir="build" includeantruntime="false"/>
+    </target>
+</project>
